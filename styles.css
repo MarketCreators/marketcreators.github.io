@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    background-color: #a20598;
+    color: #333;
+}
+
+header {
+    font-family: 'Carolyna Pro', serif;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #a20598; /* optional */
+}
+
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    gap: 1rem;
+}
+
+.header-button {
+    color: white; /* optional */
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #8B7500;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.header-button:hover {
+    background-color: black;
+}
+
+header a {
+    text-decoration: none;
+    color: white; /* optional */
+}
+  
+header a:hover {
+    color: #8B7500; /* optional */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #00e32d;
+}
+
+section {
+    padding: 3rem 2rem 2rem 2rem; /* Reduced top padding */
+    text-align: center;
+    min-height: 100vh;
+}
+
+section#home {
+    padding-top: 5rem; /* Added top padding for content separation */
+    background: url('https://www.example.com/background.jpg') no-repeat center center/cover;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section#home h1 {
+    max-width: 100%; /* or a fixed width, e.g. 300px */
+    overflow-wrap: break-word;
+    color: white;
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+section#home p {
+    font-size: 1.5rem;
+    max-width: 900px;
+}
+
+.content-image {
+    width: 80%; /* Make the image fit within the content area */
+    max-width: 100%; /* Ensure it doesn't exceed its container */
+    height: auto; /* Maintain aspect ratio */
+    margin-top: 0.5rem; /* Reduced space between the paragraph and the image */
+    border-radius: 8px; /* Optional: Add rounded corners for aesthetic */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for depth */
+}
+
+section#vip-resources {
+    background-color: black;
+    color: white;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section#vip-resources .content {
+    max-width: 800px; /* Limit the width for better readability */
+}
+
+section#vip-resources h1 {
+    max-width: 100%; /* or a fixed width, e.g. 300px */
+    overflow-wrap: break-word;
+    color: #8B7500;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+section#vip-resources h3 {
+    color: #8B7500;
+}
+
+section#trading-history {
+    background-color:black;
+    color: white;
+    margin: 2rem 0;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section#trading-history h1 {
+    max-width: 100%; /* or a fixed width, e.g. 300px */
+    overflow-wrap: break-word;
+    color: #8B7500;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+section#pricing {
+    background-color:#a20598;
+    color: white;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+section#pricing h1 {
+    font-size: 4rem;
+    text-align: center;
+    color:#8B7500
+}
+
+section#pricing .content {
+    max-width: 800px; /* Limit the width for better readability */
+}
+
+section#pricing .buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+section#pricing .buttons button {
+    background-color: #8B7500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+section#pricing .buttons button:hover {
+    background-color: black;
+    color:#8B7500
+}
+
+h1 {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+footer {
+    background-color: #24292e;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
