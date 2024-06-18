@@ -1,4 +1,4 @@
-const url = 'assets/pdf/Market-Creators-Trading2023FY.pdf';
+const pdfUrl = 'assets/pdf/Market-Creators-Trading2023FY.pdf';
 
 let pdfDoc = null,
     pageNum = 1,
