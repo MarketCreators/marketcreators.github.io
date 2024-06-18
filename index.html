@@ -32,7 +32,7 @@
         <h1>V.I.P Resources</h1>
         <h2>Explore all of the resources available to V.I.P members.</h2>
         <h3>1. Premium Telegram Channel</h3>
-        <p>📈5-10 weekly signals<br>📉Weekly directional chart markup analysis<br>📈Low Risk, High Reward Trades<br>📈Risk:Reward is always between 1:2.5 - 1:10<br>📈Step by Step Updates<br>📉Take Profit & Stop Loss levels always included<br>📈Priority Economic News Alerts</p>
+        <p><br>📈5-10 weekly signals<br><br>📉Weekly directional chart markup analysis<br><br>📈Low Risk, High Reward Trades<br><br>📈Risk:Reward is always between 1:2.5 - 1:10<br><br>📈Step by Step Updates<br><br>📉Take Profit & Stop Loss levels always included<br><br>📈Priority Economic News Alerts<br></p>
               
         <h3>2. Educational Materials</h3>
         <p>📚Digital Course: "How to Day Trade" - Unlock your full day trading potential with our comprehensive digital course designed to provide you with a solid foundation in trading strategies and techniques. Whether you're a beginner or looking to refine your skills, this course covers everything you need to become a self-sufficient profitable day trader.<br><br>🎥Weekly Zoom Call: Hosted by Market Creators, we'll be going over charting concepts for all trades made in the previous week to give you understanding behind our reasoning and to help you grow your mind and utilities as a trader. (Sunday @6PM)<br><br>📰Bi-Weekly V.I.P Finance News Articles<br><br>🎥Weekly V.I.P Podcast: Finance and Current Events affecting Markets (Friday @8PM, Coming Soon!)<br><br>📚E-Book/Audio Book: "Understanding Markets" by Parris Taylor (Coming Soon!)<br></p>
@@ -41,20 +41,15 @@
         <p>Here at Market Creators we have built a community that is completely at your disposal. This is where you will have access to the entire Market Creators crew to help you along your trading journey. Whether you have a simple or complex question we are here to support you all the way through!</p>
     
         <h3>4. Monthly/Yearly/Lifetime Access</h3>
-        <p>You will have the option to become a monthly, 6 month, yearly, or lifetime member here. All of our packages include full access to ALL materials offered to Market Creators' V.I.P members!</p>
+        <p>You will have the option to become a Monthly, 6 Month, Yearly, or Lifetime member here. All of our packages include full access to ALL materials offered to Market Creators' V.I.P members!</p>
     </section>
     
     <section id="trading-history">
         <h1>Trading History</h1>
         <h2>View our successful trading history and learn from our experiences.</h2>
         <h3>Full 2023 Trading History</h3>
-        <div id="pdf-container">
-            <canvas id="pdf-render"></canvas>
-            <div id="navigation-controls">
-                <button id="prev-page">Previous</button>
-                <span>Page: <span id="page-num"></span> / <span id="page-count"></span></span>
-                <button id="next-page">Next</button>
-            </div>
+       <div id="pdf-container">
+            <iframe id="pdf-iframe" src="assets/pdf/Market-Creators-Trading2023FY.pdf" frameborder="0"></iframe>
         </div>
     </section>
 
@@ -71,85 +66,5 @@
         </div>
     </section>
 
-<script src="https://mozilla.github.io/pdf.js/build/pdf.js"></script>
-<script>
-const pdfUrl = 'assets/pdf/Market-Creators-Trading2023FY.pdf';
-
-let pdfDoc = null,
-    pageNum = 1,
-    pageIsRendering = false,
-    pageNumIsPending = null;
-
-const scale = 1.5,
-    canvas = document.querySelector('#pdf-render'),
-    ctx = canvas.getContext('2d');
-
-// Render the page
-const renderPage = num => {
-  pageIsRendering = true;
-
-  // Get the page
-  pdfDoc.getPage(num).then(page => {
-    const viewport = page.getViewport({ scale });
-    canvas.height = viewport.height;
-    canvas.width = viewport.width;
-
-    const renderCtx = {
-      canvasContext: ctx,
-      viewport
-    };
-
-    page.render(renderCtx).promise.then(() => {
-      pageIsRendering = false;
-
-      if (pageNumIsPending !== null) {
-        renderPage(pageNumIsPending);
-        pageNumIsPending = null;
-      }
-    });
-
-    // Output current page
-    document.querySelector('#page-num').textContent = num;
-  });
-};
-
-// Check for pages rendering
-const queueRenderPage = num => {
-  if (pageIsRendering) {
-    pageNumIsPending = num;
-  } else {
-    renderPage(num);
-  }
-};
-
-// Show Prev Page
-const showPrevPage = () => {
-  if (pageNum <= 1) {
-    return;
-  }
-  pageNum--;
-  queueRenderPage(pageNum);
-};
-
-// Show Next Page
-const showNextPage = () => {
-  if (pageNum >= pdfDoc.numPages) {
-    return;
-  }
-  pageNum++;
-  queueRenderPage(pageNum);
-};
-
-// Get Document
-pdfjsLib.getDocument(url).promise.then(pdfDoc_ => {
-  pdfDoc = pdfDoc_;
-  document.querySelector('#page-count').textContent = pdfDoc.numPages;
-
-  renderPage(pageNum);
-});
-
-document.querySelector('#prev-page').addEventListener('click', showPrevPage);
-document.querySelector('#next-page').addEventListener('click', showNextPage);
-</script>
 </body>
 </html>
