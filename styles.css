@@ -160,6 +160,42 @@ section#trading-history h1 {
     margin-bottom: 1rem;
 }
 
+/* Styles for PDF.js Viewer */
+#pdf-container {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+canvas {
+    border: 1px solid #8B7500;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin-bottom: 1rem;
+}
+
+#navigation-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+#navigation-controls button {
+    background-color: #8B7500;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#navigation-controls button:hover {
+    background-color: black;
+    color: #8B7500;
+}
+
 section#pricing {
     background-color: #a20598;
     color: white;
@@ -248,5 +284,9 @@ footer {
     section#trading-history h1,
     section#pricing h1 {
         font-size: 2rem;
+    }
+    #navigation-controls {
+        flex-direction: column;
+        gap: 0.5rem;
     }
 }
