@@ -14,7 +14,7 @@ body {
 
 header {
     font-family: 'Carolyna Pro', serif;
-    position: fixed;
+    position: relative;
     top: 0;
     left: 0;
     right: 0;
