@@ -28,6 +28,7 @@ header {
 
 .header-left {
     display: flex;
+    text-align: justify;
     align-items: center;
 }
 
@@ -40,6 +41,7 @@ header {
     color: white;
     text-decoration: none;
     padding: 10px 20px;
+    text-align: center;
     background-color: #8B7500;
     border-radius: 5px;
     transition: background-color 0.3s;
