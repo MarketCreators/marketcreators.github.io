@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@600&display=swap');
 
 * {
     margin: 0;
@@ -7,144 +7,204 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: black;
+    background-color: #101010;
     color: white;
     overflow-x: hidden;
+    transition: background-color 0.3s ease;
 }
 
 header {
     font-family: 'Montserrat', sans-serif;
-    background-color: black;
+    background: linear-gradient(to right, #232323, #1a1a1a);
     color: white;
     padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .header-left h1 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
+    letter-spacing: 1.2px;
+    font-weight: bold;
 }
 
 .header-right {
     display: flex;
-    gap: 1rem;
+    gap: 1.2rem;
 }
 
 .header-button {
     color: white;
     text-decoration: none;
-    padding: 0.5rem 1rem;
+    padding: 0.7rem 1.4rem;
     background-color: #8B7500;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.4s ease;
 }
 
 header a {
     text-decoration: none;
     color: white;
 }
+
 .header-button:hover {
-    background-color: #6a5a01;
+    background-color: #FFD700;
+    transform: translateY(-3px);
 }
 
 section {
-    padding: 3rem 2rem;
+    padding: 4rem 2rem;
     text-align: center;
 }
 
 section#home {
-    background: url('https://www.example.com/background.jpg') no-repeat center center/cover;
-    color: white;
+    background: linear-gradient(to bottom right, #2e2e2e, #101010);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom, #2e2e2e, black);
 }
 
 section#home h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     color: #8B7500;
     margin-bottom: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
 }
 
 section#home p {
-    font-size: 1.25rem;
-    max-width: 600px;
+    font-size: 1.4rem;
+    max-width: 700px;
     margin: 0 auto;
+    line-height: 1.8;
+    opacity: 0.85;
 }
 
 .content-image {
     width: 80%;
     max-width: 100%;
     height: auto;
-    margin-top: 0.5rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 215, 0, 0.2);
+    transition: transform 0.3s ease;
 }
 
+.content-image:hover {
+    transform: scale(1.05);
+}
+
+/* VIP Resources Section */
 section#vip-resources {
-    background-color: black;
+    background-color: #1a1a1a;
     color: white;
     margin: 2rem 0;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 
 section#vip-resources .resource-header {
-    background-color: #2e2e2e;
-    padding: 1rem;
-    border-radius: 8px;
+    background-color: #2b2b2b;
+    padding: 1.5rem;
+    border-radius: 12px;
     margin-bottom: 2rem;
     text-align: center;
 }
 
 section#vip-resources h1 {
     color: #8B7500;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
 }
 
-section#vip-resources .resource-item {
+section#vip-resources h2 {
+    color: white;
+    font-size: 2rem;
     margin-bottom: 2rem;
+    font-weight: 400;
+    opacity: 0.8;
 }
 
-section#vip-resources .resource-item h3 {
-    background-color: #8B7500;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 8px;
-    margin-bottom: 1rem;
+section#vip-resources .resource-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+section#vip-resources .resource-card {
+    background-color: #2a2a2a;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+section#vip-resources .resource-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+section#vip-resources .icon {
+    flex-grow: 1;
+}
+
+section#vip-resources .icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+section#vip-resources .resource-content {
+    flex-grow: 1;
+}
+
+section#vip-resources .resource-content h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    color: #8B7500;
+}
+
+section#vip-resources .resource-content p {
+    font-size: 1rem;
+    line-height: 1.6;
     color: white;
+    opacity: 0.85;
 }
 
-section#vip-resources .resource-item p {
-    background-color: #1e1e1e;
-    text-align: center;
-    padding: 1rem;
-    border-radius: 8px;
-    color: white;
+@media (max-width: 768px) {
+    section#vip-resources .resource-grid {
+        grid-template-columns: 1fr;
+    }
 }
 
+/* Trading History Section */
 section#trading-history {
-    background-color: black;
+    background-color: #151515;
     color: white;
     margin: 2rem 0;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 3rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 section#trading-history h1 {
     color: white;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    margin-bottom: 1.2rem;
+    text-transform: uppercase;
 }
 
 section#trading-history h3 {
@@ -153,66 +213,72 @@ section#trading-history h3 {
 
 #pdf-container {
     text-align: center;
-    margin: 2rem 0;
+    margin: 3rem 0;
 }
 
 #pdf-iframe {
     width: 100%;
     height: 80vh;
     border: none;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
+/* Pricing Section */
 section#pricing h1 {
-    font-size: 2.5rem;
-}
-
-section#pricing h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    color: #8B7500;
+    margin-bottom: 1.5rem;
 }
 
 section#pricing .pricing-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2.5rem;
     justify-content: center;
 }
 
 section#pricing .pricing-item {
-    background-color: #1e1e1e;
-    border-radius: 8px;
-    padding: 2rem;
+    background-color: #202020;
+    border-radius: 12px;
+    padding: 2.5rem;
     width: calc(50% - 2rem);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 section#pricing .pricing-item:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
+    background-color: #282828;
 }
 
 section#pricing .pricing-item img {
     max-width: 100%;
-    border-radius: 8px;
+    height: auto;
+    border-radius: 12px;
     margin-bottom: 1rem;
+    object-fit: cover;
+    display: block;
 }
 
 section#pricing .pricing-item h3 {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-}
-
-section#pricing .pricing-item p.price {
-    font-size: 1.25rem;
-    color: #FFD700;
+    font-size: 1.8rem;
     margin-bottom: 1rem;
 }
 
+section#pricing .pricing-item p.price {
+    font-size: 1.5rem;
+    color: #8B7500;
+    margin-bottom: 1.2rem;
+}
+
 section#pricing .pricing-item p.description {
-    font-size: 1rem;
-    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
 }
 
 section#pricing .buttons {
@@ -229,19 +295,23 @@ section#pricing .buttons button {
     background: linear-gradient(to right, #FFD700, #8B7500);
     color: white;
     border: none;
-    padding: 1rem 2rem;
-    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    font-size: 1.3rem;
     cursor: pointer;
     border-radius: 30px;
-    transition: transform 0.3s, background 0.3s;
+    transition: all 0.4s ease;
 }
 
 section#pricing .buttons button:hover {
-    transform: scale(1.05);
+    transform: scale(1.06);
     background: linear-gradient(to right, #8B7500, #FFD700);
 }
 
-/* Media Queries for Mobile Responsiveness */
+section#blog h1 {
+    font-size: 2.8rem;
+    color: #8B7500
+}
+
 @media (max-width: 768px) {
     header {
         flex-direction: column;
@@ -251,21 +321,21 @@ section#pricing .buttons button:hover {
         flex-direction: column;
     }
     section#home h1 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     section#home p {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .content-image {
         width: 100%;
     }
     section {
-        padding: 2rem 1rem;
+        padding: 3rem 1rem;
     }
     section#vip-resources h1,
     section#trading-history h1,
     section#pricing h1 {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     section#pricing .pricing-item {
         width: 100%;
