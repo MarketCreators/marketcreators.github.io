@@ -15,6 +15,10 @@
                 <h1>MARKET CREATORS</h1>
             </a>
         </div>
+        <div class="header-center">
+            <h1>Current Gold Price (XAU/USD)</h1>
+            <p id="gold-quote">Fetching gold price...</p>
+        </div>
         <div class="header-right">
             <a href="#pricing" class="header-button">Join V.I.P</a>
             <a href="https://t.me/MarketCreators" class="header-button">Free Trades</a>
@@ -29,34 +33,48 @@
     <section id="vip-resources">
         <div class="resource-header">
             <h1>V.I.P Resources</h1>
-            <h2>Explore all of the resources available to V.I.P members.</h2>
+            <h2>Explore all of the exclusive resources available to V.I.P members.</h2>
         </div>
-        <div class="resource-item">
-            <h3>1. Premium Telegram Channel</h3>
-            <p>📈 5-10 weekly signals<br>📉 Weekly directional chart markup analysis<br>📈 Low Risk, High Reward Trades<br>📈 Risk:Reward is always between 1:2.5 - 1:10<br>📈 Step by Step Updates<br>📉 Take Profit & Stop Loss levels always included<br>📈 Priority Economic News Alerts</p>
-        </div>
-        <div class="resource-item">
-            <h3>2. Educational Materials</h3>
-            <p>📚 Digital Course: "How to Day Trade" - Unlock your full day trading potential with our comprehensive digital course designed to provide you with a solid foundation in trading strategies and techniques. Whether you're a beginner or looking to refine your skills, this course covers everything you need to become a self-sufficient profitable day trader.<br>🎥 Weekly Zoom Call: Hosted by Market Creators, we'll be going over charting concepts for all trades made in the previous week to give you understanding behind our reasoning and to help you grow your mind and utilities as a trader. (Sunday @6PM)<br>📰 Bi-Weekly V.I.P Finance News Articles<br>🎥 Weekly V.I.P Podcast: Finance and Current Events affecting Markets (Friday @8PM, Coming Soon!)<br>📚 E-Book/Audio Book: "Understanding Markets" by Parris Taylor (Coming Soon!)</p>
-        </div>
-        <div class="resource-item">
-            <h3>3. Discord Community</h3>
-            <p>Here at Market Creators we have built a community that is completely at your disposal. This is where you will have access to the entire Market Creators crew to help you along your trading journey. Whether you have a simple or complex question we are here to support you all the way through!</p>
-        </div>
-        <div class="resource-item">
-            <h3>4. Monthly/Yearly/Lifetime Access</h3>
-            <p>You will have the option to become a Monthly, 6 Month, Yearly, or Lifetime member here. Our packages include full access to ALL materials offered to Market Creators' V.I.P members!</p>
+        <div class="resource-grid">
+            <div class="resource-card">
+                <div class="icon">
+                    <img src="assets/images/basictelegramlogo.jpg" alt="Telegram Logo">
+                </div>
+                <div class="resource-content">
+                    <h3>Premium Telegram Channel</h3>
+                    <p>📈 5-10 weekly signals<br>📉 Weekly chart markup analysis<br>📈 Step by Step Updates<br>📉 Take Profit & Stop Loss levels<br>📈 Priority Economic News Alerts</p>
+                </div>
+            </div>
+            <div class="resource-card">
+                <div class="icon">
+                    <img src="assets/images/books.jpg" alt="1,000 Books">
+                </div>
+                <div class="resource-content">
+                    <h3>Educational Materials</h3>
+                    <p>🎥 Expert Mentorship<br>📚 Full Digital Course<br>📰 Weekly Finance News<br>📚 E-Books</p>
+                </div>
+            </div>
+            <div class="resource-card">
+                <div class="icon">
+                    <img src="assets/images/discordlogo.jpg" alt="Discord Logo">
+                </div>
+                <div class="resource-content">
+                    <h3>Discord Community</h3>
+                    <p>Access the Market Creators' community with highly skilled traders and experts ready to support you on your trading journey.</p>
+                </div>
+            </div>
+            <div class="resource-card">
+                <div class="icon">
+                    <img src="assets/images/bitcoin.jpg" alt="Physical Bitcoin">
+                </div>
+                <div class="resource-content">
+                    <h3>Membership Access</h3>
+                    <p>Choose from Monthly, 6-Month, Yearly, or Lifetime memberships. All memberships include full access to all V.I.P materials.</p>
+                </div>
+            </div>
         </div>
     </section>
-    <section id="trading-history">
-        <h1>Trading History</h1>
-        <h2>View our successful trading history and learn from our experiences.</h2>
-        <h3>Full 2023 Trading History</h3>
-        <div id="pdf-container">
-            <iframe id="pdf-iframe" src="assets/pdf/Market-Creators-Trading2023FY.pdf" width="100%" height="600px"></iframe>
-        </div>
-        <a href="assets/pdf/Market-Creators-Trading2023FY.pdf">Trouble Loading Multi-Page PDF? Click to View Full PDF</a>
-    </section>
+
     <section id="pricing">
         <div class="content">
             <h1>V.I.P Membership Pricing</h1>
@@ -105,10 +123,44 @@
                     </div>
                 </div>
             </div>
-            <h1>Gold Market News</h1>
-            <a href="assets/pdf/Article06-19-2024.pdf">06/19/2024 - A Look at The Gold Market in 2024: What's Going On?</a><br>
-            <a href="assets/pdf/Central-Bank-Meeting_07-02-24.pdf">07/02/2024 - Central Bank Meeting in Sintra, Portugal: Key Insights</a>
-        </div>
     </section>
+
+    <section id="blog">
+    <h1>Gold Market News</h1>
+    <a href="assets/pdf/Article06-19-2024.pdf">06/19/2024 - A Look at The Gold Market in 2024: What's Going On?</a>
+    <a href="assets/pdf/Central-Bank-Meeting_07-02-24.pdf">07/02/2024 - Central Bank Meeting in Sintra, Portugal: Key Insights</a>
+</section>
+
+<section id="trading-history">
+    <h1>Trading History</h1>
+    <h2>View our successful trading history and learn from our experiences.</h2>
+    <h3>Full 2023 Trading History</h3>
+    <div id="pdf-container">
+        <iframe id="pdf-iframe" src="assets/pdf/Market-Creators-Trading2023FY.pdf" width="100%" height="600px"></iframe>
+    </div>
+    <a href="assets/pdf/Market-Creators-Trading2023FY.pdf">Trouble Loading Multi-Page PDF? Click to View Full PDF</a>
+</section>
+    <script>
+        var myHeaders = new Headers();
+        myHeaders.append("x-access-token", "goldapi-e7l3sm0piijl9-io");
+        myHeaders.append("Content-Type", "application/json");
+
+        var requestOptions = {
+          method: 'GET',
+          headers: myHeaders,
+          redirect: 'follow'
+        };
+
+        fetch("https://www.goldapi.io/api/XAU/USD", requestOptions)
+          .then(response => response.json()) // Parse as JSON
+          .then(result => {
+              const goldPrice = result.price; // Get the gold price
+              document.getElementById('gold-quote').innerText = `Gold Price: $${goldPrice} USD`;
+          })
+          .catch(error => {
+              document.getElementById('gold-quote').innerText = 'Failed to fetch gold price';
+              console.log('error', error);
+          });
+    </script>
 </body>
 </html>
