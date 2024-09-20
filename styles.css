@@ -616,3 +616,124 @@ section#blog {
         grid-template-columns: 1fr;
     }
 }
+@media (max-width: 1024px) {
+    header {
+        padding: 1rem;
+    }
+
+    .header-left h1 {
+        font-size: 1.6rem;
+    }
+
+    section#home h1 {
+        font-size: 3rem;
+    }
+
+    section#home p {
+        font-size: 1.2rem;
+    }
+
+    section {
+        padding: 3rem 1.5rem;
+    }
+
+    section#vip-resources h1 {
+        font-size: 2.5rem;
+    }
+
+    section#vip-resources h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-left h1 {
+        font-size: 1.4rem;
+    }
+
+    section#home h1 {
+        font-size: 2.5rem;
+    }
+
+    section#home p {
+        font-size: 1rem;
+    }
+
+    .header-right {
+        margin-top: 1rem;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .content-image {
+        width: 90%;
+    }
+
+    section {
+        padding: 2rem 1rem;
+    }
+
+    .header-button {
+        padding: 0.6rem 1rem;
+    }
+
+    section#pricing .pricing-container {
+        flex-direction: column;
+    }
+
+    section#vip-resources .resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    section#trading-history {
+        padding: 2rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    section#home h1 {
+        font-size: 2rem;
+    }
+
+    section#home p {
+        font-size: 0.9rem;
+    }
+
+    section {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .header-button {
+        padding: 0.5rem 0.8rem;
+    }
+
+    .header-left h1 {
+        font-size: 1.2rem;
+    }
+
+    .header-right {
+        gap: 0.5rem;
+    }
+
+    .content-image {
+        width: 95%;
+    }
+
+    section#vip-resources h1 {
+        font-size: 2rem;
+    }
+
+    section#vip-resources h2 {
+        font-size: 1.5rem;
+    }
+
+    section#pricing .pricing-item {
+        width: 100%;
+    }
+}
