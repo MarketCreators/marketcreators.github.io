@@ -575,3 +575,44 @@ section#blog {
         font-size: 0.9rem; /* Smaller font size for mobile */
     }
 }
+@media (max-width: 768px) {
+    section {
+        padding: 2rem 1rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+}
+
+/* Header adjustments */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header-right {
+        margin-top: 1rem;
+    }
+}
+@media (max-width: 768px) {
+    section#pricing .pricing-item {
+        width: 100%;
+    }
+}
+/* VIP Resources section adjustments */
+@media (max-width: 768px) {
+    section#vip-resources .resource-grid {
+        grid-template-columns: 1fr;
+    }
+}
