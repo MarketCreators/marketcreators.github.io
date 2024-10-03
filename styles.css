@@ -26,6 +26,7 @@ header {
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+    height: 75px;
 }
 
 .header-left h1 {
@@ -45,23 +46,44 @@ header {
 }
 
 .header-button {
-    color: white;
-    text-decoration: none;
-    padding: 0.7rem 1.4rem;
-    background-color: #8B7500;
-    border-radius: 30px;
+    background-color: #8b7500;
+    border: 1px solid transparent;
+    border-radius: .75rem;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    cursor: pointer;
+    flex: 0 0 auto;
+    font-size: 1.125rem;
     font-weight: 600;
-    transition: all 0.4s ease;
-}
+    line-height: 1.5rem;
+    padding: .75rem 1.2rem;
+    text-align: center;
+    text-decoration: none #6B7280 solid;
+    text-decoration-thickness: auto;
+
+    transition-duration: .2s;
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: auto;
+  }
+  
+  .header-button:hover {
+    background-color: #FFD700;
+    box-shadow: gold 0 3px 8px;
+  }
+  
+  .header-button:focus {
+    box-shadow: none;
+    outline: 2px solid transparent;
+    outline-offset: 2px;
+  }
 
 header a {
     text-decoration: none;
     color: white;
-}
-
-.header-button:hover {
-    background-color: #FFD700;
-    transform: translateY(-3px);
 }
 
 section {
