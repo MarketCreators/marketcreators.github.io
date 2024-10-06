@@ -10,22 +10,36 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <div class="header-left">
-            <a href="https://www.Marketcreators.store">
-                <h1>MARKET CREATORS</h1>
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-background">
+        <div class="container-fluid">
+          <a class="navbar-brand" style="font-size: 1.8rem" href="https://www.MarketCreators.store">Market Creators</a>
+          <a class="navbar-brand text-center" style="font-weight: 100" id="gold-quote">Fetching gold price...</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="#pricing">Join V.I.P</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="https://t.me/MarketCreators">Free Trades</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#blog">Free Articles</a>
+              </li>
+            </ul>
+            <div>
+                <a href="https://www.instagram.com/marketcreators/" target="_blank">
+                    <img src="assets/images/igiconw.png" class="socialicon" alt="Instagram Icon">
+                </a>
+                <a href="https://x.com/market_creators" target="_blank">
+                <img src="assets/images/xiconw.png" class="socialicon" alt="X Icon">
             </a>
         </div>
-        <div class="header-center">
-            <h1 id="gold-quote">Fetching gold price...</h1>
+          </div>
         </div>
-        <div class="hamburger" onclick="toggleMenu()">&#9776;</div> 
-        <div class="header-right">
-            <a href="#pricing" class="header-button" role="button">Join V.I.P</a>          
-            <a href="https://t.me/MarketCreators" class="header-button" role="button">Free Trades</a>
-            <a href="https://linktr.ee/marketcreators" class="header-button" role="button">Find us on Social Media!</a>
-        </div>
-    </header>
+      </nav>
     <section id="home">
         <img src="assets/images/mclogo2.PNG" alt="Market Creators" class="content-image">
         <h1>Trade With Ultimate Confidence</h1>
@@ -167,7 +181,7 @@
     </section>
     <script>
         var myHeaders = new Headers();
-        myHeaders.append("x-access-token", "goldapi-z6cgsm1asj4fp-io");
+        myHeaders.append("x-access-token", "goldapi-e7l3sm0piijl9-io");
         myHeaders.append("Content-Type", "application/json");
 
         var requestOptions = {
